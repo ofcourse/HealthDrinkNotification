@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88A392EA19B02E4100481828 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A392E919B02E4100481828 /* Foundation.framework */; };
+		88A392EC19B02E4100481828 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A392EB19B02E4100481828 /* CoreGraphics.framework */; };
+		88A392EE19B02E4100481828 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A392ED19B02E4100481828 /* UIKit.framework */; };
+		88A392F419B02E4100481828 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88A392F219B02E4100481828 /* InfoPlist.strings */; };
+		88A392F619B02E4100481828 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A392F519B02E4100481828 /* main.m */; };
+		88A392FA19B02E4100481828 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A392F919B02E4100481828 /* AppDelegate.m */; };
+		88A392FD19B02E4100481828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A392FB19B02E4100481828 /* Main.storyboard */; };
+		88A3930019B02E4100481828 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A392FF19B02E4100481828 /* ViewController.m */; };
+		88A3930219B02E4100481828 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A3930119B02E4100481828 /* Images.xcassets */; };
+		88A3930919B02E4100481828 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A3930819B02E4100481828 /* XCTest.framework */; };
+		88A3930A19B02E4100481828 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A392E919B02E4100481828 /* Foundation.framework */; };
+		88A3930B19B02E4100481828 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A392ED19B02E4100481828 /* UIKit.framework */; };
+		88A3931319B02E4100481828 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88A3931119B02E4100481828 /* InfoPlist.strings */; };
+		88A3931519B02E4100481828 /* HealthRemindTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3931419B02E4100481828 /* HealthRemindTests.m */; };
+		88A3932119B0311C00481828 /* DrinkTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3932019B0311C00481828 /* DrinkTimeModel.m */; };
+		88A3932519B059B100481828 /* UserInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3932419B059B100481828 /* UserInfoHelper.m */; };
+		88A3932B19B0614C00481828 /* TimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3932A19B0614C00481828 /* TimeTableViewController.m */; };
+		88A3932E19B069F900481828 /* NotificationRemind.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3932D19B069F900481828 /* NotificationRemind.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88A3930C19B02E4100481828 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88A392DE19B02E4100481828 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88A392E519B02E4100481828;
+			remoteInfo = HealthRemind;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		88A392E619B02E4100481828 /* HealthRemind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthRemind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88A392E919B02E4100481828 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		88A392EB19B02E4100481828 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		88A392ED19B02E4100481828 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		88A392F119B02E4100481828 /* HealthRemind-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HealthRemind-Info.plist"; sourceTree = "<group>"; };
+		88A392F319B02E4100481828 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		88A392F519B02E4100481828 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88A392F719B02E4100481828 /* HealthRemind-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HealthRemind-Prefix.pch"; sourceTree = "<group>"; };
+		88A392F819B02E4100481828 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		88A392F919B02E4100481828 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		88A392FC19B02E4100481828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88A392FE19B02E4100481828 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		88A392FF19B02E4100481828 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		88A3930119B02E4100481828 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		88A3930719B02E4100481828 /* HealthRemindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthRemindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88A3930819B02E4100481828 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		88A3931019B02E4100481828 /* HealthRemindTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HealthRemindTests-Info.plist"; sourceTree = "<group>"; };
+		88A3931219B02E4100481828 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		88A3931419B02E4100481828 /* HealthRemindTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthRemindTests.m; sourceTree = "<group>"; };
+		88A3931F19B0311C00481828 /* DrinkTimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkTimeModel.h; sourceTree = "<group>"; };
+		88A3932019B0311C00481828 /* DrinkTimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkTimeModel.m; sourceTree = "<group>"; };
+		88A3932319B059B100481828 /* UserInfoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoHelper.h; sourceTree = "<group>"; };
+		88A3932419B059B100481828 /* UserInfoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoHelper.m; sourceTree = "<group>"; };
+		88A3932919B0614C00481828 /* TimeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTableViewController.h; sourceTree = "<group>"; };
+		88A3932A19B0614C00481828 /* TimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTableViewController.m; sourceTree = "<group>"; };
+		88A3932C19B069F900481828 /* NotificationRemind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationRemind.h; sourceTree = "<group>"; };
+		88A3932D19B069F900481828 /* NotificationRemind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationRemind.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88A392E319B02E4100481828 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A392EC19B02E4100481828 /* CoreGraphics.framework in Frameworks */,
+				88A392EE19B02E4100481828 /* UIKit.framework in Frameworks */,
+				88A392EA19B02E4100481828 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88A3930419B02E4100481828 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A3930919B02E4100481828 /* XCTest.framework in Frameworks */,
+				88A3930B19B02E4100481828 /* UIKit.framework in Frameworks */,
+				88A3930A19B02E4100481828 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88A392DD19B02E4100481828 = {
+			isa = PBXGroup;
+			children = (
+				88A392EF19B02E4100481828 /* HealthRemind */,
+				88A3930E19B02E4100481828 /* HealthRemindTests */,
+				88A392E819B02E4100481828 /* Frameworks */,
+				88A392E719B02E4100481828 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88A392E719B02E4100481828 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88A392E619B02E4100481828 /* HealthRemind.app */,
+				88A3930719B02E4100481828 /* HealthRemindTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88A392E819B02E4100481828 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88A392E919B02E4100481828 /* Foundation.framework */,
+				88A392EB19B02E4100481828 /* CoreGraphics.framework */,
+				88A392ED19B02E4100481828 /* UIKit.framework */,
+				88A3930819B02E4100481828 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88A392EF19B02E4100481828 /* HealthRemind */ = {
+			isa = PBXGroup;
+			children = (
+				88A3932919B0614C00481828 /* TimeTableViewController.h */,
+				88A3932A19B0614C00481828 /* TimeTableViewController.m */,
+				88A3932219B0599200481828 /* Helper */,
+				88A3931E19B030FF00481828 /* Model */,
+				88A392F819B02E4100481828 /* AppDelegate.h */,
+				88A392F919B02E4100481828 /* AppDelegate.m */,
+				88A392FB19B02E4100481828 /* Main.storyboard */,
+				88A392FE19B02E4100481828 /* ViewController.h */,
+				88A392FF19B02E4100481828 /* ViewController.m */,
+				88A3930119B02E4100481828 /* Images.xcassets */,
+				88A392F019B02E4100481828 /* Supporting Files */,
+			);
+			path = HealthRemind;
+			sourceTree = "<group>";
+		};
+		88A392F019B02E4100481828 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88A392F119B02E4100481828 /* HealthRemind-Info.plist */,
+				88A392F219B02E4100481828 /* InfoPlist.strings */,
+				88A392F519B02E4100481828 /* main.m */,
+				88A392F719B02E4100481828 /* HealthRemind-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88A3930E19B02E4100481828 /* HealthRemindTests */ = {
+			isa = PBXGroup;
+			children = (
+				88A3931419B02E4100481828 /* HealthRemindTests.m */,
+				88A3930F19B02E4100481828 /* Supporting Files */,
+			);
+			path = HealthRemindTests;
+			sourceTree = "<group>";
+		};
+		88A3930F19B02E4100481828 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88A3931019B02E4100481828 /* HealthRemindTests-Info.plist */,
+				88A3931119B02E4100481828 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88A3931E19B030FF00481828 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88A3931F19B0311C00481828 /* DrinkTimeModel.h */,
+				88A3932019B0311C00481828 /* DrinkTimeModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		88A3932219B0599200481828 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				88A3932C19B069F900481828 /* NotificationRemind.h */,
+				88A3932D19B069F900481828 /* NotificationRemind.m */,
+				88A3932319B059B100481828 /* UserInfoHelper.h */,
+				88A3932419B059B100481828 /* UserInfoHelper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88A392E519B02E4100481828 /* HealthRemind */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88A3931819B02E4100481828 /* Build configuration list for PBXNativeTarget "HealthRemind" */;
+			buildPhases = (
+				88A392E219B02E4100481828 /* Sources */,
+				88A392E319B02E4100481828 /* Frameworks */,
+				88A392E419B02E4100481828 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthRemind;
+			productName = HealthRemind;
+			productReference = 88A392E619B02E4100481828 /* HealthRemind.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88A3930619B02E4100481828 /* HealthRemindTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88A3931B19B02E4100481828 /* Build configuration list for PBXNativeTarget "HealthRemindTests" */;
+			buildPhases = (
+				88A3930319B02E4100481828 /* Sources */,
+				88A3930419B02E4100481828 /* Frameworks */,
+				88A3930519B02E4100481828 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88A3930D19B02E4100481828 /* PBXTargetDependency */,
+			);
+			name = HealthRemindTests;
+			productName = HealthRemindTests;
+			productReference = 88A3930719B02E4100481828 /* HealthRemindTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88A392DE19B02E4100481828 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = RainSoft;
+				TargetAttributes = {
+					88A3930619B02E4100481828 = {
+						TestTargetID = 88A392E519B02E4100481828;
+					};
+				};
+			};
+			buildConfigurationList = 88A392E119B02E4100481828 /* Build configuration list for PBXProject "HealthRemind" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88A392DD19B02E4100481828;
+			productRefGroup = 88A392E719B02E4100481828 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88A392E519B02E4100481828 /* HealthRemind */,
+				88A3930619B02E4100481828 /* HealthRemindTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88A392E419B02E4100481828 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A3930219B02E4100481828 /* Images.xcassets in Resources */,
+				88A392F419B02E4100481828 /* InfoPlist.strings in Resources */,
+				88A392FD19B02E4100481828 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88A3930519B02E4100481828 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A3931319B02E4100481828 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88A392E219B02E4100481828 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A3932119B0311C00481828 /* DrinkTimeModel.m in Sources */,
+				88A3930019B02E4100481828 /* ViewController.m in Sources */,
+				88A3932E19B069F900481828 /* NotificationRemind.m in Sources */,
+				88A392FA19B02E4100481828 /* AppDelegate.m in Sources */,
+				88A3932519B059B100481828 /* UserInfoHelper.m in Sources */,
+				88A392F619B02E4100481828 /* main.m in Sources */,
+				88A3932B19B0614C00481828 /* TimeTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88A3930319B02E4100481828 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A3931519B02E4100481828 /* HealthRemindTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88A3930D19B02E4100481828 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88A392E519B02E4100481828 /* HealthRemind */;
+			targetProxy = 88A3930C19B02E4100481828 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		88A392F219B02E4100481828 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88A392F319B02E4100481828 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		88A392FB19B02E4100481828 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88A392FC19B02E4100481828 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		88A3931119B02E4100481828 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88A3931219B02E4100481828 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88A3931619B02E4100481828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		88A3931719B02E4100481828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88A3931919B02E4100481828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HealthRemind/HealthRemind-Prefix.pch";
+				INFOPLIST_FILE = "HealthRemind/HealthRemind-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		88A3931A19B02E4100481828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HealthRemind/HealthRemind-Prefix.pch";
+				INFOPLIST_FILE = "HealthRemind/HealthRemind-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		88A3931C19B02E4100481828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HealthRemind.app/HealthRemind";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HealthRemind/HealthRemind-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HealthRemindTests/HealthRemindTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		88A3931D19B02E4100481828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HealthRemind.app/HealthRemind";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HealthRemind/HealthRemind-Prefix.pch";
+				INFOPLIST_FILE = "HealthRemindTests/HealthRemindTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88A392E119B02E4100481828 /* Build configuration list for PBXProject "HealthRemind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88A3931619B02E4100481828 /* Debug */,
+				88A3931719B02E4100481828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88A3931819B02E4100481828 /* Build configuration list for PBXNativeTarget "HealthRemind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88A3931919B02E4100481828 /* Debug */,
+				88A3931A19B02E4100481828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		88A3931B19B02E4100481828 /* Build configuration list for PBXNativeTarget "HealthRemindTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88A3931C19B02E4100481828 /* Debug */,
+				88A3931D19B02E4100481828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88A392DE19B02E4100481828 /* Project object */;
+}
