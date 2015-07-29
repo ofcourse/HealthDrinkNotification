@@ -23,6 +23,7 @@
 //    
 //    NSLog(@"current hour %d",[NotificationRemind currentHour]);
 //    NSLog(@"current min %d",[NotificationRemind currentMinute]);
+    //喝水健康提醒app
     return YES;
 }
 							
