@@ -32,7 +32,7 @@
 -(NSArray *)morningDrinkTime
 {
     if (!_morningDrinkTime) {
-        _morningDrinkTime=@[@"9:30",@"10:30",@"11:30"];
+        _morningDrinkTime=@[@"9:00",@"10:00",@"11:00",@"11:50"];
     }
     return _morningDrinkTime;
 }
@@ -47,7 +47,7 @@
 -(NSArray *)nightDrinkTime
 {
     if (!_nightDrinkTime) {
-        _nightDrinkTime=@[@"19:10",@"20:00",@"21:00",@"22:00"];//,@"22:40"
+        _nightDrinkTime=@[@"19:10",@"20:00",@"21:00"];//,@"22:40" ,@"22:00"
     }
     return _nightDrinkTime;
 }
