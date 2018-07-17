@@ -11,7 +11,7 @@
 @interface NotificationRemind : NSObject
 +(void)addNotifaction:(NSInteger)second;
 +(void)addNotifaction:(NSInteger)second remindMessage:(NSString *)msg;
-//+(void)addNotifaction:(NSDate *)date  remindMessage:(NSString *)msg;
++(void)addNotifaction:(NSDate *)fireDate alertMsg:(NSString *)alertMsg;
 +(void)cancel;
 +(void)addNotifactionTimeWeekDay;
 @end

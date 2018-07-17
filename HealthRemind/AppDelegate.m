@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
+#import "NotificationRemind.h"
 
 @implementation AppDelegate
 
@@ -24,6 +26,12 @@
 //    NSLog(@"current hour %d",[NotificationRemind currentHour]);
 //    NSLog(@"current min %d",[NotificationRemind currentMinute]);
     //喝水健康提醒app
+    //UIUserNotificationSettings
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        
+        //[NotificationRemind addNotifaction:[NSDate dateWithTimeIntervalSinceNow:2.0] alertMsg:@"测试"];
+    }];
     return YES;
 }
 							

@@ -7,49 +7,60 @@
 //
 
 #import "NotificationRemind.h"
+#import <UserNotifications/UserNotifications.h>
 
 @implementation NotificationRemind
 
-+(void)addNotifaction:(NSInteger)second{
-    [self addNotifaction:second remindMessage:@"上网时间已到期,请重新验证!"];
-}
-+(void)addNotifaction:(NSInteger)second remindMessage:(NSString *)msg
-{
-    UILocalNotification *notification=[[UILocalNotification alloc] init];
-    if (notification!=nil) {
-        NSDate *now=[NSDate new];
-        notification.fireDate=[now dateByAddingTimeInterval:second];//10秒后通知
-        notification.repeatInterval=0;//循环次数，kCFCalendarUnitWeekday一周一次
-        notification.timeZone=[NSTimeZone defaultTimeZone];
-        notification.applicationIconBadgeNumber=1; //应用的红色数字
-        notification.soundName= UILocalNotificationDefaultSoundName;//声音，可以换成alarm.soundName = @"myMusic.caf"
-        //去掉下面2行就不会弹出提示框
-        notification.alertBody=msg;//提示信息 弹出提示框
-        //notification.alertAction = @"打开........";  //提示框按钮
-        notification.hasAction = NO; //是否显示额外的按钮，为no时alertAction消失
-        // NSDictionary *infoDict = [NSDictionary dictionaryWithObject:@"someValue" forKey:@"someKey"];
-        //notification.userInfo = infoDict; //添加额外的信息
-        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-    }
-}
+//+(void)addNotifaction:(NSInteger)second{
+//    [self addNotifaction:second remindMessage:@"上网时间已到期,请重新验证!"];
+//}
+//+(void)addNotifaction:(NSInteger)second remindMessage:(NSString *)msg
+//{
+//    UILocalNotification *notification=[[UILocalNotification alloc] init];
+//    if (notification!=nil) {
+//        NSDate *now=[NSDate new];
+//        notification.fireDate=[now dateByAddingTimeInterval:second];//10秒后通知
+//        notification.repeatInterval=0;//循环次数，kCFCalendarUnitWeekday一周一次
+//        notification.timeZone=[NSTimeZone defaultTimeZone];
+//        notification.applicationIconBadgeNumber=1; //应用的红色数字
+//        notification.soundName= UILocalNotificationDefaultSoundName;//声音，可以换成alarm.soundName = @"myMusic.caf"
+//        //去掉下面2行就不会弹出提示框
+//        notification.alertBody=msg;//提示信息 弹出提示框
+//        //notification.alertAction = @"打开........";  //提示框按钮
+//        notification.hasAction = NO; //是否显示额外的按钮，为no时alertAction消失
+//        // NSDictionary *infoDict = [NSDictionary dictionaryWithObject:@"someValue" forKey:@"someKey"];
+//        //notification.userInfo = infoDict; //添加额外的信息
+//        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+//    }
+//}
+
 +(void)addNotifaction:(NSDate *)fireDate alertMsg:(NSString *)alertMsg
 {
-    UILocalNotification *notification=[[UILocalNotification alloc] init];
-    if (notification!=nil) {
-        notification.fireDate=fireDate;//10秒后通知
-        notification.repeatInterval=kCFCalendarUnitDay;//循环次数，kCFCalendarUnitWeekday一周一次
-        notification.timeZone=[NSTimeZone defaultTimeZone];
-        //notification.applicationIconBadgeNumber=0; //应用的红色数字
-        notification.soundName= UILocalNotificationDefaultSoundName;//声音，可以换成alarm.soundName = @"myMusic.caf"
-        //去掉下面2行就不会弹出提示框
-        notification.alertBody=alertMsg;//提示信息 弹出提示框
-        //notification.alertAction = @"打开........";  //提示框按钮
-        notification.hasAction = NO; //是否显示额外的按钮，为no时alertAction消失
-        // NSDictionary *infoDict = [NSDictionary dictionaryWithObject:@"someValue" forKey:@"someKey"];
-        //notification.userInfo = infoDict; //添加额外的信息
-        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-    }
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
 
+    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+    content.title = [NSString localizedUserNotificationStringForKey:@"喝水啦" arguments:nil];
+    content.body = [NSString localizedUserNotificationStringForKey:alertMsg arguments:nil];
+    content.sound = [UNNotificationSound defaultSound];
+    
+    
+
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:fireDate];
+    NSInteger hour = [components hour];
+    NSInteger minute = [components minute];
+    
+    NSDateComponents * date = [[NSDateComponents alloc] init];
+    date.hour = hour;
+    date.minute = minute;
+    //NSTimeInterval timeInterVal = [fireDate timeIntervalSinceDate:[NSDate date]];
+    UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];
+    
+    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"OXNotification" content:content trigger:trigger];
+    
+    [center addNotificationRequest:request withCompletionHandler:^(NSError *_Nullable error) {
+        NSLog(@"成功添加推送");
+    }];
 }
 +(NSDate *)getLocalDate
 {
@@ -60,7 +71,9 @@
     return localeDate;
 }
 +(void)cancel{
-    [[UIApplication sharedApplication]cancelAllLocalNotifications];
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    //[[UIApplication sharedApplication]cancelAllLocalNotifications];
+    [center removePendingNotificationRequestsWithIdentifiers:@[@"OXNotification"]];
 }
 +(void)addNotifactionTimeWeekDay
 {
